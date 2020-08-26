@@ -23,8 +23,10 @@ this.getclidistribuidor()
 
 getclidistribuidor(){
 let elem: any;
+
 let  formData:any = new FormData();
-formData.append("distribuidor",'8');
+let distribuidor= sessionStorage.getItem('distribuidor');
+formData.append("distribuidor",distribuidor);
  this.CategoriaProductoService.distribuiDorCli(formData).subscribe( (data:ClientesD[])=>{this.clientesD=data;
     $(document).ready(function(){
  
