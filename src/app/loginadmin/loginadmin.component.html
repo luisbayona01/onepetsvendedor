@@ -1,0 +1,21 @@
+
+
+
+<div class="login-form" id="estadoLogin">    
+    <form id="logear" >
+		<img src="assets/img/logos/onepets.jpg"class="img-thumbnail" alt="Cinque Terre">
+   
+        <div class="form-group">
+            <input type="text" name="Username" class="form-control" placeholder="Username" #Username="ngModel"[(ngModel)]="useradmin.Username"  >
+        </div>
+        <div class="form-group">
+            <input type="password" name="Password" class="form-control"#Password="ngModel"[(ngModel)]="useradmin.Password" placeholder="Password" >
+        </div>
+        <div class="form-group small clearfix">
+            <label class="form-check-label"><input type="checkbox"> Remember me</label>
+            <a  class="forgot-link">Forgot Password?</a>
+        </div> 
+        <input type="button" (click)="LoginAdmin()" class="btn btn-primary btn-block btn-lg" value="Login">              
+    </form>			
+    
+</div>

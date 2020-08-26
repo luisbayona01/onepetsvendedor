@@ -1,0 +1,94 @@
+ <div class="content-wrapper">
+ <div class="container-fluid">
+    <div class="row justify-content-center align-items-center minh-100">
+          <!-- left column -->
+          <div class="col-md-6">
+ 	<div class="card card-primary">
+ 	  <div class="card-header">
+                <h3 class="card-title">Creacion De Clientes</h3>
+              </div>	
+ 	<div class="card-body">
+ 		
+<form id="clientes" #registroClientes="ngForm">
+  <div class="form-group">
+    <label for="inputEmail3">Nombres del propietario</label>
+   
+ <input type="text" class="form-control" name="NombreP" id="nombreP"  #NombreP="ngModel" [(ngModel)]="cliente.NombreP"  placeholder="Nombre">
+   
+  </div>
+  <div class="form-group">
+   <label for="inputEmail3">Apellidos del Propietario </label>
+    
+      <input type="text" class="form-control" name="ApellidosP" #ApellidosP="ngModel" [(ngModel)]="cliente.ApellidosP"  id="Apellidos" placeholder="Apellidos">
+    
+  </div>
+  <div class="form-group ">
+    <label for="inputPassword3" class="col-form-label">Email</label>
+  
+      <input type="text" class="form-control" name="email" #email="ngModel" [(ngModel)]="cliente.email" id="email" placeholder="email">
+    </div>
+
+    <div class="form-group ">
+    <label for="inputPassword3" class="col-form-label">Razon social</label>
+  
+      <input type="text" class="form-control" name="razonSocial" #razonSocial="ngModel" [(ngModel)]="cliente.razonSocial"  id="razonSocial" placeholder="razonSocial">
+    </div>
+
+    <div class="form-group ">
+    <label for="inputPassword3" class="col-form-label">Identificacionpropietario</label>
+  
+      <input type="text" class="form-control" name="identificacion"#identificacion="ngModel"  [(ngModel)]="cliente.identificacion" id="identificacion" placeholder="identificacion">
+    </div>
+    <div class="form-group ">
+    <label for="inputPassword3" class="col-form-label">Nit</label>
+  
+      <input type="text" class="form-control" name="nit" id="nit" #nit="ngModel" [(ngModel)]="cliente.nit" placeholder="nit">
+    </div>
+  <div class="form-group ">
+    <label for="inputPassword3" class="col-form-label">Telefono</label>
+  
+      <input type="text" class="form-control" name="Telefono" #Telefono="ngModel"  [(ngModel)]="cliente.Telefono" id="Telefono" placeholder="Telefono">
+    </div>
+ 
+   <div class="form-group">
+    <label for="inputPassword3">Ciudad</label>
+        <select class="form-control show-tick" data-live-search="true" name="Ciudad" id="Ciudad"  #Ciudad="ngModel" [ngModel]="cliente.Ciudad" (ngModelChange)="CiudadChange($event)">
+        
+           <option *ngFor="let C of ciudad" value="{{C.idciudad}}">{{C.valor}}</option>>
+        </select>
+    </div>
+
+      <div class="form-group">
+    <label for="inputPassword3">Localidad</label>
+        <select class="form-control show-tick" name="localidad" data-live-search="true" id="localidad" #localidad="ngModel" [ngModel]="cliente.localidad" (ngModelChange)="LocalidadChange($event)">
+       
+        <option *ngFor="let L of localidades" value="{{L.idlocalidad}}">{{L.valor}}</option>
+  
+        </select>
+    </div>
+  
+       <div class="form-group">
+    <label for="inputPassword3">Barrio</label>
+        <select class="form-control show-tick" name="barrio" #barrio="ngModel" [ngModel]="cliente.barrio"  data-live-search="true" id="barrio">
+      
+      <option *ngFor="let Barrio of barrios" value="{{Barrio.idbarrio}}">{{Barrio.valor}}</option>
+        </select>
+    </div>
+  
+   <div class="form-group ">
+    <label for="inputPassword3" class="col-form-label">Direccion</label>
+   <input type="text" class="form-control" name="Direccion" id="Direccion" #Direccion="ngModel" [(ngModel)]="cliente.Direccion" placeholder="Direccion">
+    </div>
+ 
+  <div class="form-group row">
+    
+      <button type="button"(click)="SaveCliente()" class="btn btn-primary">Guardar</button>
+ 
+  </div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

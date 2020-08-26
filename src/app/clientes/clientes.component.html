@@ -1,0 +1,44 @@
+ <div class="content-wrapper" style="margin-top:70px">
+    
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">clientes</h3>
+              </div>
+              <!-- /.card-header -->
+              
+              <div class="card-body">
+                 <div class="container-fluid">
+                  <div class="table-responsive">
+                <table class="table table-bordered" id="table-clientes">
+                  <thead>                  
+                    <tr>
+                      <th>Nombre Del Propietario</th>
+                      <th>Razon social</th>
+                      <th>Telefono</th>
+                      <th>Direccion</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let cl of clientesD">
+                    <td>{{cl.nombres}}</td>
+                    <td>{{cl.razon_social}}</td>
+                    <td>{{cl.telefono}}</td>
+                    <td>{{cl.direccion}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+               </div>
+               </div>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                
+              </div>
+            </div>
+    </div>

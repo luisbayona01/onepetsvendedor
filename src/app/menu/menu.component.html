@@ -1,0 +1,100 @@
+<div  id="estado" >
+  <app-header></app-header>
+ <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="position:fixed">
+    <!-- Brand Logo -->
+    <div class="brand-link">
+      <img src="assets/img/logos/onepets.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">onepets</span>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="assets/img/faces/avatar-he.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a  class="d-block" id="users">{{users}}</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item has-treeview menu-open">
+            <a  class="nav-link active" [routerLink]="['/dashboard']"[routerLinkActive]="['active']">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                inicio
+                
+              </p>
+            </a>
+            
+          </li>
+          
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user-tie"></i>
+              <p>
+                clientes
+                <i class="fas fa-angle-left right"></i>
+                
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a [routerLink]="['/crearclientes']"[routerLinkActive]="['active']" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>crear cliente</p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a [routerLink]="['/clientes']"[routerLinkActive]="['active']" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>ListarClientes</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cart-plus fa-lg mr-2"></i>
+              <p>
+                ventas 
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+            
+              <li class="nav-item">
+                <a [routerLink]="['/crear-ordencompra']"[routerLinkActive]="['active']" class="nav-link" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Crear orden de compra</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a [routerLink]="['/ordenescompra']"[routerLinkActive]="['active']" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p> Ordenes de compra</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+          
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+  
+</div>
+ <section class="content">
+<router-outlet> </router-outlet>
+ </section>

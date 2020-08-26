@@ -1,0 +1,122 @@
+<div class ="container"> 
+<div class="row">
+<div class="login-wrap"id="login-wrap">
+      <div class="login-html">
+
+              <input id="tab-1" type="radio" name="tab" class="sign-in" checked/><label for="tab-1" class="tab">login</label>
+              <input id="tab-2" type="radio"name="tab" class="sign-up"/><label for="tab-2" class="tab">registro</label>
+            <div class="login-form">
+  
+                      <div class="sign-in-htm">
+                                    <form id="loginU">  
+                                        <div class="form-group group">
+                                            <label for="user" class="label">Email</label>
+                                            <input id="EmailU" name="mail" type="text" class="form-control input"/>
+                                        </div>
+                                        <div class="form-group group">
+                                            <label for="pass" class="label">Password</label>
+                                            <input id="pass"  name="password"  type="password" class="form-control input" data-type="password"/>
+                                        </div>
+                                        <div class="group">
+                                   
+                                        <input type="checkbox"   class="check" />
+                                       
+                                            <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                                        </div>
+                                        <div class="form-group group">
+                                            <button type="button" class="input button"> Logear</button>
+                                        </div>
+                                    </form>  
+                                    <div class="foot-lnk">
+                                      
+                                    </div>
+                       </div>
+
+                       <div class="sign-up-htm">
+            <form id="registroU" #registroForm="ngForm">
+                <div class="form-group group">
+                    <label for="user" class="label">
+                        Nombres
+                    </label>
+                   
+                    <input id="Nombres" type="text" name="nombres" class="form-control input" #Nombres="ngModel"[(ngModel)]="user.nombres" />
+                 
+                </div>
+                <div class="form-group group">
+                    <label for="user" class="label">
+                        Apellidos
+                    </label>
+                    <input id="Apellidos" type="text" name="Apellidos" class="form-control input" #Apellidos='ngModel'[(ngModel)]='user.Apellidos' />
+                     <small class="label" *ngIf="!Apellidos.valid && Apellidos.touched">
+                     El  nombre  no es  valido 
+                 </small>   
+                </div>
+                <div class="form-group group">
+                    <label for="pass" class="label">
+                        Email
+                    </label>
+                    <input id="Email" name="Email" type="text"  class="form-control input" #Email='ngModel'[(ngModel)]='user.Email'/>
+                                      </div>
+                 <div class="form-group group">
+                    <label for="pass" class="label">
+                        Identificacion
+                    </label>
+                    <input id="identificacion" name="identificacion" type="text"  class="form-control input"  #identificacion='ngModel'[(ngModel)]='user.identificacion'/>
+                   
+                </div>
+
+                <div class="form-group group">
+                    <label for="pass" class="label">
+                        Telefono
+                    </label>
+                    <input id="telefono" name="telefono" type="text" class="form-control input" #telefono='ngModel'[(ngModel)]='user.telefono'/>
+                     
+                </div>
+
+                 <div class="form-group group">
+                    <label for="pass" class="label">
+                       Direccion
+                    </label>
+                    <input id="direccion" name="direccion" type="text" class="form-control input" #telefono='ngModel'[(ngModel)]='user.direccion' >    
+                </div>
+                <div class="form-group group">
+                    <label for="pass" class="label">
+                        barrio
+                    </label>
+
+                    <select id="barrio" name="barrio" class="form-control input" #barrio='ngModel'[(ngModel)]='user.barrio'>
+                        <option value="">selecion</option>
+                         
+
+                  
+                    </select>
+                     
+                </div>
+               
+                <div class="form-group group">
+                    <label for="pass" class="label">
+                        Password
+                    </label>
+                    <input id="password" type="password" name="password" class=" form-control input" #password='ngModel'[ngModel]='user.password'/>
+                  
+                </div>
+
+                <div class="form-group  group">
+                    <button type="button"(click)="reGistrar()" class="button">
+                        Registrar
+                    </button>
+                </div>
+            </form>
+
+
+                      </div>
+
+
+
+        </div>
+      
+      </div>
+</div>
+
+</div>
+</div>   

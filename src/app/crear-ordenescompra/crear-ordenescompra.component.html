@@ -1,0 +1,122 @@
+ <div class="content-header navbar navbar-expand-sm bg-light navbar-dark fixed-top" style="margin-top:40px">
+      <div class="container ">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark"> <small></small></h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb"><div class="form-group">
+    <label for="inputPassword3">Categorias</label>
+        <select class="form-control show-tick" data-live-search="true" name="categoriap"  #categoriap="ngModel" [(ngModel)]="OC.categoriap" id="categorias">
+        
+           <option *ngFor="let cp of categoriaP" value="{{cp.idcategoria}}">{{cp.valor}}</option>
+        </select>
+    </div></li>
+              <li class="breadcrumb">
+        <div class="form-group">
+    <label for="inputPassword3">Clientes</label>
+        <select class="form-control show-tick" data-live-search="true" name="clientesd" #clientesd="ngModel" [(ngModel)]="OC.clientesd" id="cliente" >
+        
+           <option *ngFor="let cl of clientesD" value="{{cl.comprador}}">{{cl.nombres}}</option>>
+        </select>
+    </div></li>
+            
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+
+
+
+
+  <div class="content-wrapper"style="margin-top:290px">
+   <div class="container-fluid">
+    <div class="row justify-content-center align-items-center minh-100">
+          <!-- left column -->
+          <div class="col-md-6">
+
+    <table class="table" id="tableproductos">
+              
+              <thead>
+              <tr>
+              	<th></th>
+              </tr>	
+              </thead>  
+               <tbody> 
+               
+               	<tr *ngFor="let P of productos;  index as i;">
+               	<td class="justify-content-center" *ngIf="P.id_categoriap == OC.categoriap || OC.categoriap ==='' ">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                      
+                        <h4 class="my-0 font-weight-bold">{{P.nombre}}</h4>
+                      
+                    </div>
+                    <div class="card-body">
+                        <img [src]="P.imagen" class="card-img-top">
+                      
+
+                        <ul class="list-unstyled mt-3 mb-4">
+                        	<li>$ {{P.precio | number:'1.0':'en-US'}}</li> 
+                            <li>{{P.codigo}}</li>
+                            <li>{{P.descripcion}}</li>
+                            <li>cantidad: <input class="form-control cantidad" type="text" name="cantidad" id="{{'Cantidad'+i}}" value="0"></li>
+                           </ul>
+                        
+                        <button  type="button" class="btn btn-block btn-primary agregar-carrito"(click)="AddOrdenC('Cantidad'+i,P.precio,P.idproductos,OC.clientesd)">Add Orden De Compra</button>  
+                    </div>
+                </div>
+            </td>
+
+
+            </tr>
+           
+             </tbody>   
+          </table> 
+            
+            <!--  *ngFor="let cp of categoriaP  -->
+
+               </div>
+             </div>
+         </div>
+      </div>
+
+         
+
+
+
+
+            
+
+
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
