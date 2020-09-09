@@ -61,6 +61,7 @@ getpcli(){
 
 let elem: any;
   this.CategoriaProductoService.getpclip().subscribe( (data:Productos[])=>{this.productos=data;
+    
  elem = $("#categorias");
   //elem.selectpicker('destroy');
   $(document).ready(function(){

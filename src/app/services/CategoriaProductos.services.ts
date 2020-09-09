@@ -8,7 +8,7 @@ import {Cproductos} from '../interfaces/cproductos';
 
 export class CategoriaProductoService {
  
-  Api='https://www.cubic.com.co/apiecommercemerka/public/index.php/';
+  Api='http://localhost/apiecommercemerka/public/';
   constructor(private htppClient:HttpClient) {}
  
 

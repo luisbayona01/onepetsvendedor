@@ -19,12 +19,7 @@ users:string;
 	    Password:''}
   this.islogin();
   let dataestado= sessionStorage.getItem('estado');
-     if (dataestado=='1') {
-          $("#estado").show();
-        }else{
-           $("#estado").hide();
-          //this.router.navigate(['']);
-        }
+    
 		   }
 
       ngOnInit() {}
@@ -33,12 +28,7 @@ users:string;
      let dataestado= sessionStorage.getItem('estado');
 
 
-     if (dataestado=='1') {
-          $("#estado").show();
-        }else{
-           $("#estado").hide();
-          //this.router.navigate(['']);
-        }
+     
 				if (dataestado=='1') {
 					this.estado='1';
 					this.router.navigate(['/dashboard']);
@@ -66,14 +56,13 @@ users:string;
 		   this.ConsultaService.autenticar(params).subscribe((data)=>{ 
 
 		       if(data[0]){
-              //console.log(data);
+              console.log(data);
 		       sessionStorage.setItem('users',data[0].users);
 		       sessionStorage.setItem('distribuidor',data[0].idusuarios);
 		       
 		          sessionStorage.setItem('estado','1');
 		         this.users =sessionStorage.getItem('users');
-		       ///window.location.reload(true);
-		       //location.reload();
+		
 	    let dataestado= sessionStorage.getItem('estado');
 
 				if (dataestado=='1') {

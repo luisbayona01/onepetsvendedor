@@ -17,12 +17,7 @@ export class DashboardComponent implements OnInit {
   //this.islogin();
  let dataestado= sessionStorage.getItem('estado');
 
-        if (dataestado=='1') {
-          $("#estado").show();
-        }else{
-           $("#estado").hide();
-          //this.router.navigate(['']);
-        }
+       
          this.users =sessionStorage.getItem('users'); 
          this.users =sessionStorage.getItem('users');
         $("#users").html(sessionStorage.getItem('users'));
@@ -32,17 +27,6 @@ export class DashboardComponent implements OnInit {
   }
 
 
- islogin():void{
-     let dataestado= sessionStorage.getItem('estado');
-
-        if (dataestado=='1') {
-          this.estado='1';
-          //this.router.navigate(['/dashboard']);
-        }else{
-          this.estado='0';
-          //this.router.navigate(['']);
-        }
-      }
 
 getventastotalpesos(){
 let  formData:any = new FormData();

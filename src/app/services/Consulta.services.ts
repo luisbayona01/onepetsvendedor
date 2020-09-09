@@ -10,7 +10,7 @@ import {Barrios} from '../interfaces/barrios';
 
 export class ConsultaService {
  
-  Api='https://www.cubic.com.co/apiecommercemerka/public/index.php/';
+  Api='http://localhost/apiecommercemerka/public/';
   constructor(private htppClient:HttpClient) {}
  
 
